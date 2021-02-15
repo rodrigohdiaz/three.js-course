@@ -39,9 +39,20 @@ window.addEventListener('resize', () => {
 
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
-}
-)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
 
+window.addEventListener('dblclick', () => 
+{
+    if(!document.fullscreenElement)
+    {
+        canvas.requestFullscreen()
+    } 
+    else 
+    {
+        document.exifFullscreen
+    }
+})
 /**
  * Camera
  */
@@ -61,6 +72,7 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 /**
  * Animate
