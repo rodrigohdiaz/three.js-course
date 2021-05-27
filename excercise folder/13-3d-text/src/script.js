@@ -77,7 +77,7 @@ fontLoader.load(
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
         // const donutMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
         
-        for(let i = 0; i < 300; i++)
+        for(let i = 0; i < 150; i++)
         {
             const donut = new THREE.Mesh(donutGeometry, material)
 
@@ -96,6 +96,28 @@ fontLoader.load(
 
             scene.add(donut)
         }
+
+        const boxGeometry = new THREE.BoxGeometry(0.3, 0.3, 0.3)
+       
+        
+        for(let i = 0; i < 150; i++)
+        {
+            const box = new THREE.Mesh(boxGeometry, material)
+
+            box.position.x = (Math.random() - 0.5) * 10
+            box.position.y = (Math.random() - 0.5) * 10
+            box.position.z = (Math.random() - 0.5) * 10
+
+            box.rotation.x = Math.random() * Math.PI
+            box.rotation.y = Math.random() * Math.PI
+           
+            const scale = Math.random()
+            box.scale.set( scale, scale, scale)
+
+            scene.add(box)
+        }
+
+
         // console.timeEnd('donuts')
     }
 )
