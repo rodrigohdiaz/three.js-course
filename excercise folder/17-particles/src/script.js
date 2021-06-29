@@ -134,19 +134,19 @@ const tick = () =>
 
     // Update particles
     
-    // particles.rotation.y = - elapsedTime / 5
-    // particles.rotation.x = elapsedTime / 3
-    // particles.rotation.z = elapsedTime / 3
+    particles.rotation.y = - elapsedTime / 5
+    particles.rotation.x = elapsedTime / 3
+    particles.rotation.z = elapsedTime / 3
 
-    for(let i = 0; i< count; i++)
-    {
-        const i3 = i * 3
+    // for(let i = 0; i< count; i++)
+    // {
+    //     const i3 = i * 3
 
-        const x = particlesGeometry.attributes.position.array[i3 + 0]
-        particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
-    }
+    //     const x = particlesGeometry.attributes.position.array[i3 + 0]
+    //     particlesGeometry.attributes.position.array[i3 + 1] = Math.sin(elapsedTime + x)
+    // }
 
-    particlesGeometry.attributes.position.needsUpdate = true
+    // particlesGeometry.attributes.position.needsUpdate = true
 
     // Update controls
     controls.update()
