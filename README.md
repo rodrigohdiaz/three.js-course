@@ -1,3 +1,3 @@
 # three-course
 three.js course
-This is the repo of my journey to learn three.js, so if you would like to clone this repo, it is fine by me, but please don't try to push it back to the master, as this is for me to come back and review I'm not expecting this to be perfect but it is part of my learning.
+This is the repo of my journey to learn three.js and I have it here just to come back and look at what I have learned, and also for future employers to see what I have been learning in three.js, so I'd appreciate if it is not cloned or changed.
